@@ -19,7 +19,8 @@ app.use('/static', express.static(path.resolve(__dirname, '../static')))
 app.set('view engine', 'ejs')
 
 app.get('/', function (req, res) {
-  res.sendFile(path.resolve(__dirname, '../views', 'search.html'))
+  res.sendFile(path.resolve(__dirname, '../views', 'search.html'));
+  res.status(200).send('I dream of being a web site...2017081701');
 })
 
 app.get('/template', function (req, res) {
